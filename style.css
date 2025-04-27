@@ -1,0 +1,435 @@
+/* --- ESTILOS SUPER MEJORADOS PARA EL CLON AIRBNB --- */
+
+/* Importar fuentes (Montserrat y Lora) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;700&display=swap');
+
+/* Reset básico y Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Fondo gradiente sutil como base */
+    background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado de Página con Imagen de Fondo */
+.page-header {
+    position: relative; /* Necesario por si usamos pseudo-elementos para overlay */
+    background-image: url('images/header-bg.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center center; /* Mejor centrado */
+    background-repeat: no-repeat;
+    padding: 80px 0 70px 0; /* Ajustar padding si es necesario */
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ffffff; /* Color de texto por defecto BLANCO para el header */
+    z-index: 1; /* Asegura que el contenido esté sobre el pseudo-elemento */
+}
+
+/* Capa de Overlay Oscura Semitransparente */
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Gradiente oscuro: negro/marrón muy oscuro arriba a un poco más transparente abajo */
+    background: linear-gradient(to bottom, rgba(45, 35, 30, 0.5) 0%, rgba(60, 50, 45, 0.5) 100%);
+    z-index: -1; /* Poner el overlay DETRÁS del texto pero SOBRE la imagen de fondo */
+}
+
+.page-header h1 {
+    font-family: 'Lora', serif;
+    font-size: 3rem; /* Un poco más grande */
+    color: #ffffff; /* Texto blanco */
+    margin-bottom: 10px;
+    /* Sombra oscura sutil para destacar sobre cualquier fondo */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page-header p {
+    font-size: 1.15rem; /* Ligeramente más grande */
+    color: rgba(255, 255, 255, 0.9); /* Blanco ligeramente transparente */
+    font-weight: 400;
+    max-width: 600px; /* Limitar ancho si es necesario */
+    margin-left: auto;
+    margin-right: auto;
+     /* Sombra opcional también para el párrafo */
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); */
+}
+/* --- ESTILOS PARA LA BARRA DE CATEGORÍAS --- */
+
+.category-nav {
+    padding: 10px 0; /* Reducir padding vertical ligeramente */
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 45px; /* Ajustar espacio si es necesario */
+    position: sticky; /* Hacer que la barra se quede fija al hacer scroll (opcional) */
+    top: 0;           /* Necesario si usas sticky */
+    z-index: 10;      /* Asegura que esté sobre otros elementos al fijarse */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04); /* Sombra sutil para sticky */
+}
+
+.category-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px; /* Espacio entre lista y botón */
+}
+
+.category-list {
+    display: flex;
+    align-items: center; /* Alinear items verticalmente en el centro */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Usar padding en los items en lugar de gap directo aquí
+       para controlar mejor el espaciado visual total */
+    /* gap: 30px; */ /* Reemplazado por padding en 'a' */
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.category-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrar contenido verticalmente */
+    gap: 6px; /* Espacio reducido entre icono y texto */
+    text-decoration: none;
+    color: #717171;
+    /* Padding Horizontal es clave para espaciado consistente */
+    padding: 10px 16px; /* Aumentar padding horizontal */
+    border-bottom: 2px solid transparent; /* Base transparente */
+    transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+    white-space: nowrap;
+    opacity: 0.75; /* Ligeramente más opaco por defecto */
+    height: 60px; /* Altura fija para asegurar alineación vertical */
+}
+
+.category-item a:hover {
+    color: #222;
+    border-bottom-color: #717171; /* Línea gris delgada en hover */
+    opacity: 1;
+}
+
+/* Estilo para item activo (más pronunciado) */
+.category-item.active a { /* Añade la clase 'active' a un LI en el HTML si quieres marcar uno */
+    color: #222;
+    border-bottom-color: #222; /* Línea negra sólida */
+    opacity: 1;
+}
+
+.category-icon {
+    width: 26px; /* Tamaño ligeramente aumentado */
+    height: 26px;
+    object-fit: contain;
+}
+
+.category-label {
+    font-size: 0.7rem; /* Texto aún más pequeño */
+    font-weight: 600; /* Semi-negrita está bien aquí */
+    letter-spacing: 0.2px; /* Ligero espaciado */
+}
+
+/* Botón Filtros */
+.filters-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 10px; /* Un poco más redondeado */
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #222;
+    flex-shrink: 0;
+    transition: box-shadow 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+}
+
+.filters-button:hover {
+    border-color: #b0b0b0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+.filters-button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+}
+
+.filter-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* --- AJUSTES MENORES A ESTILOS EXISTENTES (Revisar/Mantener) --- */
+
+.page-header {
+    /* ... (mantener estilos anteriores del header) ... */
+    margin-bottom: 0; /* Importante: Sin margen inferior */
+}
+
+main.container {
+     /* ... (mantener estilos anteriores del main) ... */
+     margin-top: 0; /* Importante: Sin margen superior */
+     padding-top: 50px; /* Asegurar padding interno */
+}
+
+/* --- Media Query para Barra de Categorías (Revisar/Mantener) --- */
+@media (max-width: 768px) {
+    /* ... (mantener o ajustar estilos de media query para .category-nav y sus hijos) ... */
+    .category-nav {
+        padding: 8px 0;
+        margin-bottom: 30px;
+    }
+    .category-item a {
+        padding: 8px 12px; /* Reducir padding horizontal en tablet */
+        height: 55px; /* Reducir altura */
+    }
+    .category-icon {
+        width: 22px;
+        height: 22px;
+    }
+    .category-label {
+        font-size: 0.65rem;
+    }
+    .filters-button {
+        padding: 8px 12px;
+    }
+}
+
+/* Considerar ocultar texto en móvil muy pequeño si se desea */
+
+@media (max-width: 600px) {
+    .category-label {
+        display: none;
+    }
+    .category-item a {
+        padding: 8px;
+    }
+    .filters-button span {
+        display: none;
+    }
+    .filters-button {
+        padding: 8px;
+    }
+}
+
+/* Contenedor Principal de la Cuadrícula (MAIN) */
+main.container {
+    background-color: #fffdfa; /* Fondo blanco ligeramente cálido para el área de tarjetas */
+    padding: 40px; /* Padding interno para separar la grid de los bordes */
+    border-radius: 18px; /* Bordes redondeados para el contenedor */
+    box-shadow: 0 10px 40px rgba(160, 124, 110, 0.15); /* Sombra más pronunciada para el contenedor */
+    margin-bottom: 50px; /* Espacio después del contenedor */
+}
+
+/* Cuadrícula de Tarjetas */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado minmax */
+    gap: 30px;
+}
+
+/* Estilo de UNA Tarjeta */
+.listing-card {
+    background-color: #fff; /* Fondo blanco limpio */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07),
+                0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f0f0; /* Borde muy sutil para definir tarjetas */
+}
+
+.listing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+                0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Contenedor de la Imagen */
+.card-image-container {
+    position: relative;
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 0.95;
+    object-fit: cover;
+}
+
+/* Botón de Favorito */
+.favorite-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.35); /* Ligeramente más oscuro */
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 34px; /* Un poco más grande */
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.favorite-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+
+.favorite-button::after {
+    content: '♥';
+    line-height: 1;
+}
+
+/* Información Debajo de la Imagen */
+.card-info {
+    padding: 15px 18px 18px 18px; /* Padding ajustado */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.card-title { /* O la clase que estés usando */
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.3;
+
+    /* --- Propiedades NECESARIAS para line-clamp --- */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* --- Fin de Propiedades Necesarias --- */
+
+    /* --- Limitación de líneas --- */
+    -webkit-line-clamp: 2; /* Para navegadores basados en WebKit */
+    line-clamp: 2;         /* La propiedad estándar (¡ESTA ES LA QUE FALTABA!) */
+    /* --- Fin de Limitación --- */
+
+    margin-right: 5px;
+    /* Asegúrate que no haya 'height' o 'max-height' fija aquí,
+       ya que line-clamp maneja la altura basado en las líneas */
+}
+
+.card-rating {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Espacio ajustado */
+    flex-shrink: 0;
+}
+.card-rating::before {
+    content: '★';
+    color: #ff385c;
+    font-size: 0.95em; /* Estrella ligeramente más pequeña */
+}
+
+.card-details,
+.card-dates {
+    font-size: 0.85rem;
+    color: #717171;
+    margin-bottom: 5px; /* Espacio consistente */
+}
+
+.card-price {
+    font-size: 0.95rem; /* Ligeramente más grande */
+    color: #222;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.card-price strong {
+    font-weight: 700;
+}
+
+/* --- Media Query para Responsividad --- */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 50px 0 40px 0;
+    }
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    .page-header p {
+        font-size: 1rem;
+    }
+    main.container {
+        padding: 30px; /* Menos padding en tablet */
+        margin-bottom: 40px;
+    }
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+    .container {
+        padding: 0 15px; /* Padding solo para contenedor interno */
+    }
+    .page-header {
+        padding: 40px 15px 30px 15px; /* Padding interno */
+        margin-bottom: 30px;
+        border-radius: 0; /* Sin bordes redondeados en móvil */
+    }
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    main.container {
+        padding: 20px; /* Menos padding en móvil */
+        margin: 0 10px 30px 10px; /* Márgenes laterales y abajo */
+        border-radius: 12px; /* Redondeo menor */
+    }
+    .card-grid {
+        gap: 20px;
+    }
+    .listing-card {
+        border-radius: 12px; /* Redondeo menor */
+    }
+}
