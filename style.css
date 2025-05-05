@@ -94,7 +94,7 @@ body {
     display: flex;
     align-items: center; /* Alinear items verticalmente en el centro */
     list-style: none;
-    padding: 0;
+    padding-left: 125px;
     margin: 0;
     /* Usar padding en los items en lugar de gap directo aquí
        para controlar mejor el espaciado visual total */
