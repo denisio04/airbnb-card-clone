@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en"> <!-- Changed language to English -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clon Tarjetas Airbnb</title>
+    <title>Airbnb Card Clone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/icons/home.png" type="image/x-icon">
-    <!-- Link a Google Fonts (Ej: Montserrat) -->
+    <!-- Link to Google Fonts (e.g., Montserrat) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,74 +15,74 @@
 
     <header class="page-header">
         <div class="container">
-            <h1>Clon Visual: Tarjetas de Listado Airbnb</h1>
-            <p>Una réplica enfocada en HTML y CSS Grid Layout</p>
+            <h1>Visual Clone: Airbnb Listing Cards</h1>
+            <p>A replica focused on HTML and CSS Grid Layout</p>
         </div>
     </header>
-    <!-- ========= BARRA DE CATEGORÍAS ========= -->
+    <!-- ========= CATEGORY BAR ========= -->
     <nav class="category-nav">
         <div class="container category-nav-container">
             <ul class="category-list">
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/house.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Cabañas</span>
+                        <img src="images/icons/house.png" alt="Cabins icon" class="category-icon">
+                        <span class="category-label">Cabins</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/star.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Icónicos</span>
+                        <img src="images/icons/star.png" alt="Iconic icon" class="category-icon">
+                        <span class="category-label">Iconic</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/landscape.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Vista increíble</span>
+                        <img src="images/icons/landscape.png" alt="Amazing views icon" class="category-icon">
+                        <span class="category-label">Amazing views</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/ufo.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Extraordinarios</span>
+                        <img src="images/icons/ufo.png" alt="OMG! icon" class="category-icon">
+                        <span class="category-label">OMG!</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/breakfast.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Bed and breakfasts</span>
+                        <img src="images/icons/breakfast.png" alt="Bed & breakfasts icon" class="category-icon">
+                        <span class="category-label">Bed & breakfasts</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/clean.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Nuevo</span>
+                        <img src="images/icons/clean.png" alt="New icon" class="category-icon">
+                        <span class="category-label">New</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/hut.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Frente a la playa</span>
+                        <img src="images/icons/hut.png" alt="Beachfront icon" class="category-icon">
+                        <span class="category-label">Beachfront</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/treehouse.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Casas del árbol</span>
+                        <img src="images/icons/treehouse.png" alt="Treehouses icon" class="category-icon">
+                        <span class="category-label">Treehouses</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="#">
-                        <img src="images/icons/lake.png" alt="" class="category-icon"> <!-- Cambia el src -->
-                        <span class="category-label">Casas del lago</span>
+                        <img src="images/icons/lake.png" alt="Lakefront icon" class="category-icon">
+                        <span class="category-label">Lakefront</span>
                     </a>
                 </li>
-                <!-- Añade más li.category-item si tienes más iconos -->
+                <!-- Add more li.category-item if you have more icons -->
             </ul>
 
             <button class="filters-button">
-                <img src="images/icons/filter.png" alt="" class="filter-icon"> <!-- Cambia el src -->
-                <span>Filtros</span>
+                <img src="images/icons/filter.png" alt="Filters icon" class="filter-icon">
+                <span>Filters</span>
             </button>
         </div>
     </nav>
@@ -91,109 +91,109 @@
     <main class="container">
         <div class="card-grid">
 
-            <!-- Tarjeta de Ejemplo 1 (Repetiremos esta estructura) -->
+            <!-- Example Card 1 (Structure repeated) -->
             <article class="listing-card">
                 <div class="card-image-container">
-                    <img src="images/placeholder-1.jpg" alt="Alojamiento de ejemplo 1" class="card-image">
-                    <!-- Icono de corazón (simulado o real) -->
+                    <img src="images/placeholder-1.jpg" alt="Example Listing 1" class="card-image">
+                    <!-- Heart icon (simulated or real) -->
                     <button class="favorite-button">♥</button>
                 </div>
                 <div class="card-info">
                     <div class="info-header">
-                        <h3 class="card-title">Shelton, Washington, EE. UU.</h3>
+                        <h3 class="card-title">Shelton, Washington, USA</h3>
                         <span class="card-rating">★ 4.99</span>
                     </div>
-                    <p class="card-details">A 35 millas de distancia</p>
-                    <p class="card-dates">4-9 de may</p>
-                    <p class="card-price"><strong>$2,094</strong> por 5 noches</p>
+                    <p class="card-details">35 miles away</p>
+                    <p class="card-dates">May 4-9</p>
+                    <p class="card-price"><strong>$2,094</strong> 5 nights</p>
                 </div>
             </article>
 
-            <!-- Tarjeta de Ejemplo 2 (Copia y pega la estructura anterior y cambia el contenido/imagen) -->
+            <!-- Example Card 2 (Copy/paste structure, change content/image) -->
             <article class="listing-card">
                 <div class="card-image-container">
-                    <img src="images/placeholder-2.jpg" alt="Alojamiento de ejemplo 2" class="card-image">
+                    <img src="images/placeholder-2.jpg" alt="Example Listing 2" class="card-image">
                     <button class="favorite-button">♥</button>
                 </div>
                 <div class="card-info">
                     <div class="info-header">
-                        <h3 class="card-title">Ashford, Washington, EE. UU.</h3>
+                        <h3 class="card-title">Ashford, Washington, USA</h3>
                         <span class="card-rating">★ 4.94</span>
                     </div>
-                    <p class="card-details">A 61 millas de distancia</p>
-                    <p class="card-dates">17-22 de may</p>
-                    <p class="card-price"><strong>$1,501</strong> por 5 noches</p>
+                    <p class="card-details">61 miles away</p>
+                    <p class="card-dates">May 17-22</p>
+                    <p class="card-price"><strong>$1,501</strong> 5 nights</p>
                 </div>
             </article>
 
-            <!-- Tarjeta de Ejemplo 3 -->
+            <!-- Example Card 3 -->
             <article class="listing-card">
                 <div class="card-image-container">
-                    <img src="images/placeholder-3.jpg" alt="Alojamiento de ejemplo 3" class="card-image">
+                    <img src="images/placeholder-3.jpg" alt="Example Listing 3" class="card-image">
                     <button class="favorite-button">♥</button>
                 </div>
                 <div class="card-info">
                     <div class="info-header">
-                        <h3 class="card-title">North Bend, Washington, EE. UU.</h3>
+                        <h3 class="card-title">North Bend, Washington, USA</h3>
                         <span class="card-rating">★ 4.94</span>
                     </div>
-                    <p class="card-details">A 29 millas de distancia</p>
-                    <p class="card-dates">4-9 de may</p>
-                    <p class="card-price"><strong>$1,678</strong> por 5 noches</p>
+                    <p class="card-details">29 miles away</p>
+                    <p class="card-dates">May 4-9</p>
+                    <p class="card-price"><strong>$1,678</strong> 5 nights</p>
                 </div>
             </article>
 
-            <!-- Tarjeta de Ejemplo 4 -->
+            <!-- Example Card 4 -->
             <article class="listing-card">
                 <div class="card-image-container">
-                    <img src="images/placeholder-4.jpg" alt="Alojamiento de ejemplo 4" class="card-image">
+                    <img src="images/placeholder-4.jpg" alt="Example Listing 4" class="card-image">
                     <button class="favorite-button">♥</button>
                 </div>
                 <div class="card-info">
                     <div class="info-header">
-                        <h3 class="card-title">Ashford, Washington, EE. UU.</h3>
+                        <h3 class="card-title">Ashford, Washington, USA</h3>
                         <span class="card-rating">★ 4.99</span>
                     </div>
-                    <p class="card-details">A 61 millas de distancia</p>
-                    <p class="card-dates">6-11 de jul</p>
-                    <p class="card-price"><strong>$2,448</strong> por 5 noches</p>
+                    <p class="card-details">61 miles away</p>
+                    <p class="card-dates">Jul 6-11</p>
+                    <p class="card-price"><strong>$2,448</strong> 5 nights</p>
                 </div>
             </article>
 
-            <!-- Tarjeta de Ejemplo 5 -->
+            <!-- Example Card 5 -->
             <article class="listing-card">
                 <div class="card-image-container">
-                    <img src="images/placeholder-5.jpg" alt="Alojamiento de ejemplo 5" class="card-image">
+                    <img src="images/placeholder-5.jpg" alt="Example Listing 5" class="card-image">
                     <button class="favorite-button">♥</button>
                 </div>
                 <div class="card-info">
                     <div class="info-header">
-                        <h3 class="card-title">Seabeck, Washington, EE. UU.</h3>
+                        <h3 class="card-title">Seabeck, Washington, USA</h3>
                         <span class="card-rating">★ 4.85</span>
                     </div>
-                    <p class="card-details">Frente al canal Hood</p>
-                    <p class="card-dates">10-15 de jun</p>
-                    <p class="card-price"><strong>$1,950</strong> por 5 noches</p>
+                    <p class="card-details">Hood Canal front</p>
+                    <p class="card-dates">Jun 10-15</p>
+                    <p class="card-price"><strong>$1,950</strong> 5 nights</p>
                 </div>
             </article>
     
-            <!-- Tarjeta de Ejemplo 6 -->
+            <!-- Example Card 6 -->
             <article class="listing-card">
                 <div class="card-image-container">
-                    <img src="images/placeholder-6.jpg" alt="Alojamiento de ejemplo 6" class="card-image">
+                    <img src="images/placeholder-6.jpg" alt="Example Listing 6" class="card-image">
                     <button class="favorite-button">♥</button>
                 </div>
                 <div class="card-info">
                     <div class="info-header">
-                        <h3 class="card-title">Leavenworth, Washington, EE. UU.</h3>
+                        <h3 class="card-title">Leavenworth, Washington, USA</h3>
                         <span class="card-rating">★ 4.91</span>
                     </div>
-                    <p class="card-details">Estilo cabaña alpina</p>
-                    <p class="card-dates">20-25 de ago</p>
-                    <p class="card-price"><strong>$2,100</strong> por 5 noches</p>
+                    <p class="card-details">Alpine cabin style</p>
+                    <p class="card-dates">Aug 20-25</p>
+                    <p class="card-price"><strong>$2,100</strong> 5 nights</p>
                 </div>
             </article>
-        </div> <!-- Fin de card-grid -->
+        </div> <!-- End of card-grid -->
     </main>
 
 </body>
